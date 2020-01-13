@@ -4,7 +4,7 @@ package staff;
 public abstract class Employee {
     private String name;
     private int niNumber;
-    private double salary;
+    protected double salary;
 
     public Employee(String name, int niNumber, double salary) {
         this.name = name;

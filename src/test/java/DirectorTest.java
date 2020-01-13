@@ -32,7 +32,7 @@ public class DirectorTest {
 
     @Test
     public void shouldGetPayBonusAmount() {
-        double expectedBonusAmount = director.getSalary() * 0.01;
+        double expectedBonusAmount = director.getSalary() * 0.02;
         assertEquals(expectedBonusAmount, director.payBonus(),0.01);
     }
 
@@ -50,4 +50,5 @@ public class DirectorTest {
     public void shouldReturnSalary() {
         assertEquals(2045.89,director.getSalary(),0.01);
     }
+
 }
