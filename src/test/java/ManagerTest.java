@@ -19,10 +19,24 @@ public class ManagerTest {
     }
 
     @Test
+    public void shouldSetName() {
+        manager.setName("Aresky");
+        assertEquals("Aresky",manager.getName());
+    }
+
+    @Test
+    public void shouldNotSetNullName() {
+        manager.setName(null);
+        assertEquals("Juan",manager.getName());
+    }
+
+    @Test
     public void shouldRaiseSalary() {
         manager.raiseSalary(1);
         assertEquals(2046.89,manager.getSalary(),0.01);
     }
+
+
 
     @Test
     public void shouldNotRaiseNegativeAmount() {
