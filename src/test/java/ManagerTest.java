@@ -25,6 +25,12 @@ public class ManagerTest {
     }
 
     @Test
+    public void shouldNotRaiseNegativeAmount() {
+        manager.raiseSalary(-1);
+        assertEquals(2045.89,manager.getSalary(),0.01);
+    }
+
+    @Test
     public void shouldGetPayBonusAmount() {
         double expectedBonusAmount = manager.getSalary() * 0.01;
         assertEquals(expectedBonusAmount, manager.payBonus(),0.01);
